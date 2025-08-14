@@ -153,21 +153,3 @@
       Feito com carinho • Compartilhe com quem possa ajudar 💌
     </footer>
   </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const el = document.getElementById("arrecadado"); // ajuste se o elemento tiver outro ID
-  const update = () => {
-    const url = `${el.dataset.source}?v=${Date.now()}`;
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        const valor = parseFloat(data.arrecadado ?? data.valor ?? 0);
-        el.textContent = valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-      })
-      .catch(err => console.error("Erro ao carregar arrecadação:", err));
-  };
-  update(); // atualiza ao carregar a página
-  setInterval(update, 30 * 1000); // depois, atualiza a cada 30 segundos
-});
-</script>
