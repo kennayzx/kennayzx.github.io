@@ -1,0 +1,15 @@
+<!-- Contador de arrecadação com fonte externa -->
+<div id="arrecadado" class="contador-wrapper" 
+     data-start="0" 
+     data-goal="5000" 
+     data-rate-per-hour="0" 
+     data-source="https://kennayzx.github.io/data/arrecadacao.json">
+  <div class="contador-titulo">Arrecadado</div>
+  <div class="contador-valor">R$ 0,00</div>
+  <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+  <div class="contador-sub">Meta: R$ 5.000,00</div>
+</div>
+
+<!-- Observação: crie a pasta /data no seu repositório e coloque dentro um arquivo arrecadacao.json com: -->
+<!-- { "amount": 0 } -->
+<!-- Sempre que receber um PIX, edite esse número no GitHub que o contador será atualizado para todos -->
